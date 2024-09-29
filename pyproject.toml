@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "md-table-to-excel"
+version = "0.1.1"
+description = "将Markdown表格转换为Excel可粘贴格式的命令行工具"
+authors = ["花照小赵 <duerzy@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "md_table_to_excel", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyperclip = "^1.8.2"
+markdown = "^3.3.7"
+beautifulsoup4 = "^4.10.0"
+
+[tool.poetry.scripts]
+md-table-to-excel = "md_table_to_excel.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
